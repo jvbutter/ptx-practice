@@ -47,11 +47,19 @@
     </frontmatter>
 
     <chapter xml:id="chapter-title">
-      <title>Chapter title</title>
+      <title>Getting started</title>
 
       <section xml:id="section-title">
-        <title>Section title</title>
-        <p>Hello</p>
+        <title>In Codespaces</title>
+          <p>
+          I can build to web, and view the result.
+          </p>
+          <p>
+          I can build to <latex>\LaTeX</latex>, and view the result.
+          </p>
+          <p>
+          I cannot build to PDF, however.
+          </p>
       </section>
 
     </chapter>
