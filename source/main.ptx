@@ -64,6 +64,41 @@
 
     </chapter>
 
+  <chapter xml:id="ch-Details">
+    <title>Details</title>
+    <p>
+      The symbol for <q>degree</q> depends on context.
+      In order to discuss the weather, write that it is expected to reach 24<degree/> C today.
+      In order to discuss angles, in math mode write that <m>\tan{45^\circ}=1</m>.
+    </p>
+    <p>
+      In order to produce a figure (for web, at least), I think I need to build assets as well as the regular build.
+      At any rate, building both of those things (sometimes a couple of times) seems to result in a figure that behaves as expected, 
+      as in <xref ref="fig-numlineone"/> below.
+      <em>Update:</em> I actually think it just sometimes takes a minute to load the image.
+    </p>
+    <figure width="50%" xml:id="fig-numlineone">
+    <caption>A number line example, produced with TiKZ.</caption>
+      <image>
+      <description>A number line from 1 to 8, indicating the open interval from 5 to 7.</description>
+          <latex-image>
+            <![CDATA[
+            \begin{tikzpicture}
+              \draw[latex-latex] (0.5,0) -- (8.5,0) ;
+              \foreach \x in  {1,2,3,4,5,6,7,8}
+                \draw[shift={(\x,0)},color=black] (0pt,3pt) -- (0pt,-3pt);
+              \foreach \x in {1,2,3,4,5,6,7,8}
+                \draw[shift={(\x,0)},color=black] (0pt,0pt) -- (0pt,-3pt) node[below] {\(\x\)};
+              \draw[very thick] (5,0) -- (7,0);
+              \filldraw[fill=white] (5,0) circle (.09cm);
+              \filldraw[fill=white] (7,0) circle (.09cm);
+            \end{tikzpicture}
+            ]]>
+          </latex-image>
+        </image>
+    </figure>
+  </chapter>
+
     <backmatter xml:id="backmatter">
       <title>Backmatter</title>
 
