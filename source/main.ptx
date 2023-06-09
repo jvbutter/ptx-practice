@@ -98,6 +98,34 @@
         </image>
     </figure>
   </chapter>
+<chapter xml:id="ch-trying">
+  <title>Trying WebWorK</title>
+  <p>If I can.</p>
+<section xml:id="sec-Exercises">
+  <title>Exercises</title>
+  <p>These are the exercises in Module 1.
+  In order to view them, you first need to generate assets.</p>
+  <!-- Exercise 1.1 -->
+  <exercise>
+    <webwork>
+      <pg-code>
+        Context("Fraction");
+        $n1 = Compute(random(2, 17, 1));
+        $n2 = Compute(random(3, 21, 1));
+        $d1 = Compute(random(2, 8, 2));
+        $n3 = $n1 + $n2;
+        $ans = Compute("$n3 / $d1");
+        $evaluator = $ans -> cmp(studentsMustReduceFractions=>1);
+      </pg-code>
+      <statement>
+        <p>Add the fractions, and reduce your answer.</p>
+        <p><m>\frac{<var name="$n1"/>}{<var name="$d1"/>}+\frac{<var name="$n2"/>}{<var name="$d1"/>}</m></p>
+        <p>The reduced answer is <var name="$ans" width="2" evaluator="$evaluator"/></p>
+      </statement>
+    </webwork>
+  </exercise>
+</section>
+</chapter>
 
     <backmatter xml:id="backmatter">
       <title>Backmatter</title>
